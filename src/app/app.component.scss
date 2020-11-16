@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+}
+
+.app{
+    justify-content: space-evenly;
+    padding: 20px;
+
+    .app__left{
+        // use 90% of the screen width
+        flex: 0.9;
+    }
+    .app__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        h1{
+            color: #fc3c3c;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+    }
+    .app__right{
+        h3{
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+    app-info-box{
+        flex:1;
+        cursor: pointer;
+    }
+    .infoBox--selected{
+        border-top: 10px solid greenyellow;
+    }
+    .infoBox--red{
+        border-color: red;
+    }
+
+
+    // everyone but the last child
+    app-info-box:not(:last-child){
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 990px) {
+    .app{
+        flex-direction: column;
+    }
+}

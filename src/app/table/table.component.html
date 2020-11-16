@@ -1,0 +1,6 @@
+<table class="table-responsive">
+    <tr *ngFor="let country of countries">
+        <td><img src="{{country.countryInfo.flag}}" alt=""> {{country.country}}</td>
+        <td><strong>{{numeral(country.cases)}}</strong></td>
+    </tr>
+</table>
